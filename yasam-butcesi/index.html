@@ -1,1 +1,88 @@
-<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Yaşam Bütçesi</title></head><body><main><h1>Yaşam Bütçesi</h1><p>Android uygulaması geliştirici sayfası.</p></main></body></html>
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#153f31">
+  <meta name="description" content="Yaşam Bütçesi ile gelir, gider, yaklaşan ödemeler ve günlük harcama planını sade bir ekranda takip et.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://y-afes.github.io/yasam-butcesi/">
+  <title>Yaşam Bütçesi — Bütçeni sade şekilde planla</title>
+  <style>
+    :root{--bg:#f7f5ee;--paper:#fffdf8;--ink:#17251f;--muted:#66736c;--green:#194d3b;--pale:#eaf1eb;--line:#dfe4dc;--amber:#a56a22;--shadow:0 18px 50px rgba(23,37,31,.08)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+    a{color:inherit}.wrap{width:min(1080px,calc(100% - 36px));margin:auto}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(247,245,238,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(223,228,220,.9)}
+    .nav{height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:-.02em}
+    .mark{width:34px;height:34px;border-radius:11px;background:var(--green);display:grid;place-items:center;color:#fff;font-size:16px;box-shadow:0 8px 18px rgba(25,77,59,.18)}
+    .navlinks{display:flex;align-items:center;gap:22px}.navlinks a{text-decoration:none;color:var(--muted);font-size:14px;font-weight:650}.navlinks a:hover{color:var(--green)}
+    .navbtn{padding:9px 14px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--green)!important}
+    .hero{display:grid;grid-template-columns:1.08fr .92fr;gap:58px;align-items:center;padding:72px 0 66px}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--green);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:var(--amber)}
+    h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(42px,6vw,70px);line-height:1.02;letter-spacing:-.045em;margin:18px 0 20px}.accent{color:var(--amber)}
+    .lead{font-size:18px;line-height:1.7;color:#44534b;max-width:640px;margin:0 0 28px}.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.primary,.secondary{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:12px;text-decoration:none;font-size:14px;font-weight:800}.primary{background:var(--green);color:#fff;box-shadow:0 10px 24px rgba(25,77,59,.18)}.secondary{border:1px solid var(--line);background:var(--paper);color:var(--green)}.smallnote{margin-top:13px;color:var(--muted);font-size:12px}
+    .phone{margin:auto;width:min(100%,360px);border-radius:32px;background:#122c23;padding:10px;box-shadow:0 28px 70px rgba(18,44,35,.2);transform:rotate(1.2deg)}.screen{background:#f8f6ef;border-radius:24px;min-height:560px;padding:22px 18px 18px;overflow:hidden}
+    .apphead{display:flex;justify-content:space-between;align-items:center;font-family:Georgia,serif;color:var(--green);font-size:21px;font-weight:700}.tag{font-family:inherit;font-size:10px;border:1px solid var(--line);padding:6px 8px;border-radius:999px;background:#fff}.screen h3{font-size:20px;margin:27px 0 4px}.sub{font-size:11px;color:var(--muted)}
+    .budgetcard{background:var(--green);border-radius:18px;padding:18px;margin-top:14px;color:#fff}.budgetcard span{font-size:12px;opacity:.88}.money{font-size:36px;font-weight:850;letter-spacing:-.04em;margin:5px 0}.budgetcard small{font-size:10px;opacity:.8}
+    .mini{background:#fff;border:1px solid var(--line);border-radius:15px;padding:13px 14px;margin-top:10px}.row{display:flex;justify-content:space-between;gap:16px;padding:7px 0;font-size:11px}.row b{color:var(--green);font-size:13px}.fakebtn{margin-top:10px;padding:12px;text-align:center;background:var(--green);color:#fff;border-radius:12px;font-size:12px;font-weight:800}.fakebtn.ghost{background:#fff;color:var(--green);border:1px solid var(--line)}
+    .strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr)}.stat{padding:22px 18px;border-right:1px solid var(--line)}.stat:last-child{border-right:none}.stat b{display:block;color:var(--green);font-size:17px;margin-bottom:4px}.stat span{font-size:12px;color:var(--muted);line-height:1.5}
+    section{padding:72px 0}.sectionhead{max-width:700px;margin-bottom:30px}.sectionhead h2{font-family:Georgia,serif;font-weight:500;font-size:clamp(30px,4vw,44px);letter-spacing:-.03em;margin:9px 0 10px}.sectionhead p{margin:0;color:var(--muted);line-height:1.7}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:23px;min-height:190px}.icon{width:40px;height:40px;border-radius:12px;background:var(--pale);display:grid;place-items:center;color:var(--green);font-weight:900}.card h3{font-size:17px;margin:18px 0 8px}.card p{font-size:14px;line-height:1.65;color:var(--muted);margin:0}
+    .security{display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:center;background:var(--green);color:#fff;border-radius:28px;padding:36px}.security .sectionhead{margin:0}.security .eyebrow{color:#dcebe3}.security .sectionhead p{color:#d6e2dc}.checklist{display:grid;gap:10px}.check{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.13);border-radius:14px;padding:13px 15px;font-size:13px;line-height:1.5}.check span{color:#d6e2dc}
+    .faq{display:grid;grid-template-columns:1fr 1fr;gap:12px}.faq details{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:15px 17px}.faq summary{cursor:pointer;font-weight:750;font-size:14px}.faq p{font-size:13px;line-height:1.65;color:var(--muted);margin:10px 0 2px}
+    .cta{padding:0 0 72px}.ctabox{background:var(--paper);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:26px;padding:30px;display:flex;align-items:center;justify-content:space-between;gap:24px}.ctabox h2{font-family:Georgia,serif;font-size:28px;font-weight:500;margin:0 0 6px}.ctabox p{color:var(--muted);margin:0;font-size:14px}
+    footer{border-top:1px solid var(--line);padding:24px 0 34px;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footlinks{display:flex;gap:18px}.foot a{text-decoration:none}.foot a:hover{color:var(--green)}
+    @media(max-width:820px){.hero{grid-template-columns:1fr;padding-top:48px;gap:38px}.phone{transform:none}.strip{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:none}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}.grid{grid-template-columns:1fr 1fr}.security{grid-template-columns:1fr}.faq{grid-template-columns:1fr}}
+    @media(max-width:560px){.wrap{width:min(100% - 24px,1080px)}.nav{height:58px}.navlinks a:not(.navbtn){display:none}.hero{padding:38px 0 46px}.lead{font-size:16px}.grid{grid-template-columns:1fr}.strip{grid-template-columns:1fr}.stat{border-right:none!important;border-bottom:1px solid var(--line)}.stat:last-child{border-bottom:none}.screen{min-height:520px}.security{padding:24px 18px;border-radius:20px}.ctabox{align-items:flex-start;flex-direction:column}.primary,.secondary{width:100%}}
+  </style>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap nav">
+    <a class="brand" href="./"><span class="mark">₺</span><span>Yaşam Bütçesi</span></a>
+    <nav class="navlinks" aria-label="Ana menü"><a href="#ozellikler">Özellikler</a><a href="#guvenlik">Güvenlik</a><a href="gizlilik/">Gizlilik</a><a class="navbtn" href="mailto:softwareplus@yahoo.com?subject=Ya%C5%9Fam%20B%C3%BCt%C3%A7esi%20destek">Destek</a></nav>
+  </div>
+</header>
+<main>
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> Android için kişisel bütçe uygulaması</div>
+      <h1>Paranı takip et.<br><span class="accent">Gününü planla.</span></h1>
+      <p class="lead">Gelir ve giderlerini kaydet, yaklaşan ödemelerini ayır ve bir sonraki gelir gününe kadar kullanabileceğin bütçeyi sade bir ekranda gör.</p>
+      <div class="actions"><a class="primary" href="#ozellikler">Uygulamayı keşfet</a><a class="secondary" href="gizlilik/">Gizlilik politikası</a></div>
+      <div class="smallnote">Google Play yayını hazırlanıyor · Android 7 ve üzeri</div>
+    </div>
+    <div class="phone" aria-label="Yaşam Bütçesi uygulama önizlemesi">
+      <div class="screen">
+        <div class="apphead"><span>Yaşam Bütçesi</span><span class="tag">Reklamsız</span></div><h3>Paran için net bir plan.</h3><div class="sub">Sonraki gelire 18 gün</div>
+        <div class="budgetcard"><span>Harcama bütçen</span><div class="money">18.420,00 ₺</div><small>Ödemeler ve birikim ayrıldıktan sonra</small></div>
+        <div class="mini"><div class="row"><span>Günlük plan</span><b>1.023,33 ₺</b></div><div class="row"><span>Önümüzdeki 7 gün</span><b>7.163,31 ₺</b></div></div>
+        <div class="mini"><div class="row"><span>Kullanılabilir bakiye</span><strong>25.000,00 ₺</strong></div><div class="row"><span>Planlı ödemeler</span><strong>−4.580,00 ₺</strong></div><div class="row"><span>Ayırdığın birikim</span><strong>−2.000,00 ₺</strong></div></div>
+        <div class="fakebtn">＋ Harcama ekle</div><div class="fakebtn ghost">Bunu alırsam?</div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap strip"><div class="stat"><b>Günlük plan</b><span>Kalan bütçeni gelir gününe göre bölüştür.</span></div><div class="stat"><b>Ödeme planı</b><span>Yaklaşan ödemeleri bütçenden önceden ayır.</span></div><div class="stat"><b>Şifreli kayıt</b><span>Bütçe verilerini cihazında koru.</span></div><div class="stat"><b>Parolalı yedek</b><span>İstersen kendi seçtiğin konuma yedekle.</span></div></div>
+  <section id="ozellikler"><div class="wrap"><div class="sectionhead"><div class="eyebrow"><span class="dot"></span> Sade ve işlevsel</div><h2>Bütçe takibinde ihtiyacın olanlar.</h2><p>Karmaşık tablolar yerine günlük karar vermeyi kolaylaştıran, kompakt bir akış.</p></div>
+    <div class="grid">
+      <article class="card"><div class="icon">01</div><h3>Gelir ve gider takibi</h3><p>Harcama ve gelirlerini kategori, tarih ve isteğe bağlı notla kaydet. Gün, hafta veya ay bazında incele.</p></article>
+      <article class="card"><div class="icon">02</div><h3>Günlük harcama planı</h3><p>Planlı ödemeler ve ayırdığın birikim düşüldükten sonra kullanabileceğin günlük tutarı gör.</p></article>
+      <article class="card"><div class="icon">03</div><h3>Yaklaşan ödemeler</h3><p>Fatura ve taksitlerini önceden ekle. Ödeme gerçekleştiğinde tek dokunuşla gider kaydına dönüştür.</p></article>
+      <article class="card"><div class="icon">04</div><h3>“Bunu alırsam?” hesabı</h3><p>Bir alışverişin kalan bütçene ve günlük planına etkisini gerçek gider oluşturmadan hesapla.</p></article>
+      <article class="card"><div class="icon">05</div><h3>İsteğe bağlı hatırlatma</h3><p>Yaklaşan ödeme için Android bildirimi al. Bildirim tercihini uygulama içinden açıp kapat.</p></article>
+      <article class="card"><div class="icon">06</div><h3>Tek seferlik reklamsız kullanım</h3><p>Mağaza sürümünde reklamları kaldırmak için abonelik yerine tek seferlik satın alma seçeneği planlanır.</p></article>
+    </div>
+  </div></section>
+  <section id="guvenlik" style="padding-top:0"><div class="wrap security"><div class="sectionhead"><div class="eyebrow">Gizlilik ve güvenlik</div><h2>Kayıtların öncelikle senin cihazında.</h2><p>Uygulama bütçe kayıtlarını cihazın uygulamaya ayrılmış alanında şifreli olarak saklamak üzere tasarlanmıştır.</p></div>
+    <div class="checklist"><div class="check"><b>Cihaz kilidi doğrulaması</b><br><span>Uygulamayı açarken Android’in kendi ekran kilidi doğrulaması kullanılır.</span></div><div class="check"><b>Şifreli yerel kayıt</b><br><span>Bütçe verileri cihazda AES-256-GCM ile korunur ve anahtar Android Keystore ile yönetilir.</span></div><div class="check"><b>Parolalı dışa aktarma</b><br><span>Yedek almak istersen dosyayı kendi seçtiğin konuma şifreli biçimde kaydedebilirsin.</span></div><div class="check"><b>Hassas izin yok</b><br><span>Kamera, mikrofon, rehber, SMS veya hassas konum izni istenmez.</span></div></div>
+  </div></section>
+  <section><div class="wrap"><div class="sectionhead"><div class="eyebrow"><span class="dot"></span> Sık sorulanlar</div><h2>Kısa cevaplar.</h2></div><div class="faq">
+    <details><summary>Banka hesabıma bağlanıyor mu?</summary><p>Hayır. Gelir, gider ve ödeme bilgilerini sen girersin; uygulama banka hesabına bağlanmaz ve otomatik tahsilat yapmaz.</p></details>
+    <details><summary>Uygulama hesabı açmam gerekiyor mu?</summary><p>Hayır. Mevcut yapıda ayrı bir kullanıcı hesabı oluşturulmaz.</p></details>
+    <details><summary>Telefonu değiştirirsem ne olur?</summary><p>Uygulama içinden şifreli yedek oluşturup yeni cihazında bu yedeği geri yükleyebilirsin. Yedek parolanı güvenli saklaman gerekir.</p></details>
+    <details><summary>Destek için ne paylaşmalıyım?</summary><p>Sorunun hangi adımda oluştuğunu yazman yeterli. Telefon kilit kodunu, yedek parolanı veya ödeme kartı bilgilerini paylaşma.</p></details>
+  </div></div></section>
+  <div class="wrap cta"><div class="ctabox"><div><h2>Bir sorun mu var?</h2><p>Yaşam Bütçesi ile ilgili destek için SoftwarePlus’a e-posta gönderebilirsin.</p></div><a class="primary" href="mailto:softwareplus@yahoo.com?subject=Ya%C5%9Fam%20B%C3%BCt%C3%A7esi%20destek">softwareplus@yahoo.com</a></div></div>
+</main>
+<footer><div class="wrap foot"><span>© 2026 SoftwarePlus · Yaşam Bütçesi</span><div class="footlinks"><a href="gizlilik/">Gizlilik Politikası</a><a href="mailto:softwareplus@yahoo.com">Destek</a></div></div></footer>
+</body>
+</html>
