@@ -4,4 +4,4 @@
 ## Uygulama bağlantıları
 
 - [https://y-afes.github.io/yasam-butcesi/](https://y-afes.github.io/yasam-butcesi/)
-- [https://y-afes.github.io/vardiyam/](https://y-afes.github.io/vardiyam/)
+- [https://y-afes.github.io/vardiyam/](https://y-afes.github.io/mesai/)
