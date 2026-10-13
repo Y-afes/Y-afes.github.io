@@ -8,6 +8,12 @@ For AI-assisted work on this public website repository:
 - Verify changes and links where possible. State clearly what was tested and what was not.
 - A new chat does not automatically read this file or obtain GitHub access merely because the file exists.
 
+## Ponytail geliştirme yöntemi (varsayılan: full)
+- Açık kaynak kural kümesi: https://github.com/DietrichGebert/ponytail/blob/main/AGENTS.md (MIT).
+- Mevcut HTML/CSS/JS ve dağıtım altyapısını yeniden kullan. İstenen işi eksiksiz çözen en küçük okunabilir değişikliği seç; gerekmedikçe yeni bağımlılık veya iş akışı ekleme.
+- Güvenlik, erişilebilirlik, bağlantıların doğruluğu, reklam dosyaları ve mevcut davranışlar korunur. Gerekli testleri atlama.
+- Bu proje kuralları Ponytail'i yönlendirir; bu dosya tek başına yerel CLI eklentisini kurmaz.
+
 ## Zorunlu Windows host izolasyonu (DevLab-Secure)
 - ChatGPT, Codex, GitHub ajanlari ve otomatik kod calistirma islemleri Windows ev sahibinde veya eski WSL2 Ubuntu icinde calistirilmayacak. Linux gorevleri yalniz Hyper-V **DevLab-Secure** VM icinde veya yetkili GitHub-hosted runner'da calisir.
 - Windows C:, E: ve diger diskler, kullanici profili ve D:\DevLab disindaki her klasor yasaktir. **VM'ye D:\DevLab dahil hicbir Windows klasoru mount edilmez**; VHDX'in D:\DevLab icinde bulunmasi VM'nin host dosyalarini gorebilmesi anlamina gelmez.
