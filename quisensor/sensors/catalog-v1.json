@@ -1,0 +1,74 @@
+{
+  "1": {
+    "mark": "ACCEL",
+    "accent": "#51F5D4",
+    "tr": "İvmeölçer çipinin temsili şeması · gerçek sensör fotoğrafı değildir.",
+    "en": "Illustrative accelerometer circuit · not an actual chip photo."
+  },
+  "2": {
+    "mark": "MAG",
+    "accent": "#FF92CC",
+    "tr": "Manyetik alan sensörü şematik çip görseli.",
+    "en": "Illustrative magnetic-field detector chip."
+  },
+  "4": {
+    "mark": "GYRO",
+    "accent": "#AB96FF",
+    "tr": "Jiroskop MEMS yongasının temsili çizimi.",
+    "en": "Illustrative gyroscope MEMS sensor design."
+  },
+  "5": {
+    "mark": "LIGHT",
+    "accent": "#FFCA82",
+    "tr": "Işık algılayıcı fotodiyot şeması · temsili çizim.",
+    "en": "Illustrative light-sensing photodiode layout."
+  },
+  "6": {
+    "mark": "PRESSURE",
+    "accent": "#59D0FF",
+    "tr": "Barometrik basınç MEMS sensörünün temsili çizimi.",
+    "en": "Illustrative barometric pressure MEMS device."
+  },
+  "8": {
+    "mark": "NEAR",
+    "accent": "#5BCBFF",
+    "tr": "Yakınlık algılayıcının temsili elektronik şeması.",
+    "en": "Illustrative proximity detector component."
+  },
+  "9": {
+    "mark": "GRAVITY",
+    "accent": "#84FBC6",
+    "tr": "Yerçekimi algılama devresinin temsili çizimi.",
+    "en": "Illustrative gravity detection circuit."
+  },
+  "10": {
+    "mark": "LINEAR",
+    "accent": "#8BA7FF",
+    "tr": "Doğrusal ivme sensörünün temsili görünümü.",
+    "en": "Illustrative linear acceleration sensor."
+  },
+  "11": {
+    "mark": "ROTATE",
+    "accent": "#AA96FF",
+    "tr": "Dönüş vektörü işlemcisinin temsili görünümü.",
+    "en": "Illustrative rotation vector component."
+  },
+  "12": {
+    "mark": "HUMIDITY",
+    "accent": "#74EAB8",
+    "tr": "Bağıl nem sensörü için temsili elektronik çizim.",
+    "en": "Illustrative relative humidity sensor design."
+  },
+  "13": {
+    "mark": "TEMP",
+    "accent": "#FFC27C",
+    "tr": "Ortam sıcaklığı sensörünün temsili çip şeması.",
+    "en": "Illustrative ambient temperature component."
+  },
+  "15": {
+    "mark": "GAME",
+    "accent": "#AB96FF",
+    "tr": "Oyun yönelim sensörünün temsili görseli.",
+    "en": "Illustrative game rotation component."
+  }
+}
