@@ -8,5 +8,4 @@
 
 - [Play Sensör — https://y-afes.github.io/quisensor/](https://y-afes.github.io/quisensor/)
 
-## AdMob / app-ads.txt
 
