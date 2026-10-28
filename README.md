@@ -8,3 +8,5 @@
 - [Play Sensör — https://y-afes.github.io/quisensor/](https://y-afes.github.io/quisensor/)
 
 
+
+- [SeriSayfa — https://y-afes.github.io/quisensor/serisayfa/](https://y-afes.github.io/quisensor/serisayfa/)
