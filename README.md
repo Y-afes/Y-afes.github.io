@@ -9,4 +9,4 @@
 
 
 
-- [SeriSayfa — https://y-afes.github.io/quisensor/serisayfa/](https://y-afes.github.io/quisensor/serisayfa/)
+- [SeriSayfa — https://y-afes.github.io/quisensor/seri/](https://y-afes.github.io/quisensor/seri/)

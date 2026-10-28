@@ -6,18 +6,18 @@ altında, ayrı bir **SeriSayfa Android** web sitesi barındırır. Play Sensör
 
 ## Canlı adresler
 
-- Geliştirici/uygulama tanıtımı: https://y-afes.github.io/quisensor/serisayfa/
-- Gizlilik: https://y-afes.github.io/quisensor/serisayfa/privacy.html
-- Destek: https://y-afes.github.io/quisensor/serisayfa/support.html
-- Çocuk güvenliği: https://y-afes.github.io/quisensor/serisayfa/safety.html
-- Kullanım koşulları: https://y-afes.github.io/quisensor/serisayfa/terms.html
+- Geliştirici/uygulama tanıtımı: https://y-afes.github.io/quisensor/seri/
+- Gizlilik: https://y-afes.github.io/quisensor/seri/privacy.html
+- Destek: https://y-afes.github.io/quisensor/seri/support.html
+- Çocuk güvenliği: https://y-afes.github.io/quisensor/seri/safety.html
+- Kullanım koşulları: https://y-afes.github.io/quisensor/seri/terms.html
 - **AdMob app-ads.txt kök adresi**: https://y-afes.github.io/app-ads.txt
 
 ## AdMob / Play Console gerekli işlem
 
 Google Play Console'da SeriSayfa uygulamasının **Mağaza ayarları →
 Mağaza girişi iletişim bilgileri → Web sitesi** alanına
-`https://y-afes.github.io/quisensor/serisayfa/` girilmeli.
+`https://y-afes.github.io/quisensor/seri/` girilmeli.
 Bu işlem GitHub Pages dosyasını oluşturarak kendiliğinden yapılamaz; Play
 Console kaydının güncellenmesi ayrıca gerekir. Yayın sonrası AdMob
 **app-ads.txt → Güncellemeleri kontrol edin** kullanılabilir. Google
