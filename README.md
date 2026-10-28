@@ -7,6 +7,3 @@
 - [Mesai - https://y-afes.github.io/mesai/](https://y-afes.github.io/mesai/)
 - [Play Sensör — https://y-afes.github.io/quisensor/](https://y-afes.github.io/quisensor/)
 
-
-
-- [SeriSayfa — https://y-afes.github.io/quisensor/seri/](https://y-afes.github.io/quisensor/seri/)
